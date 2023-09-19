@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/cloudtools/sha256/archive/v{{ version }}.tar.gz
+  url: https://github.com/cloudtools/sha256/archive/{{ version }}.tar.gz
   sha256: 7bf2d287c2df10af1b7e6830340beeb1a79edc0433740f2e4fc68d8c1d06ab95
 
 build:
