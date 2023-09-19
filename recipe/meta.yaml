@@ -10,7 +10,6 @@ source:
   sha256: f07d40006ad22b0d38acefff25ed1337993688eb87328b03c3aaaf39ded03a05
 
 build:
-  script: {{ PYTHON }} setup.py sdist; {{ PYTHON }} -m pip install . -vv
   number: 3
 
 requirements:
