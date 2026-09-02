@@ -1,0 +1,45 @@
+schema_version: 1
+
+context:
+  name: sha256
+  version: "1.0"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/cloudtools/sha256/archive/${{ version }}.tar.gz
+  sha256: e7184e5561a1cf4a7eccc8544e3a28ffbf51ccc725c7a6e43ee3cfe54980f332
+
+build:
+  number: 3
+
+requirements:
+  build:
+    - ${{ compiler('c') }}
+    - ${{ stdlib("c") }}
+  host:
+    - cython
+    - pip
+    - setuptools
+    - python
+  run:
+    - python
+
+tests:
+  - python:
+      imports:
+        - sha256
+      pip_check: true
+
+about:
+  summary: sha256 library with midstate
+  license: MIT
+  license_file: LICENSE
+  homepage: https://pypi.org/project/sha256/
+  repository: https://github.com/cloudtools/sha256
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
