@@ -3,14 +3,14 @@
 
 package:
   name: {{ name|lower }}
-  version: {{ version }}
+  version: "{{ version }}"
 
 source:
   url: https://github.com/cloudtools/sha256/archive/{{ version }}.tar.gz
   sha256: e7184e5561a1cf4a7eccc8544e3a28ffbf51ccc725c7a6e43ee3cfe54980f332
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
